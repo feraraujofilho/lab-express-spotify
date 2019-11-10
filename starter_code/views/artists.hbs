@@ -1,9 +1,13 @@
-<div class="artist-item">
-    <h4></h4>
+<div class="artist-item row container-fluid">
 
     {{#each artistInfo}}
-    <img src="{{images.[0].url}}" />
+    <div class="col-md-4 col-sm-12 artists-container">
+        <img src="{{images.[0].url}}" onerror="this.src='man-4.jpg'" />
+        <div class="small-box">
+            <p class="album-title">{{name}}</p>
+            <a href="/albums/{{id}}" class="link-album">View Albums</a>
 
-    <a href="/albums/{{id}}">View Albums</a>
+        </div>
+    </div>
     {{/each}}
 </div>
